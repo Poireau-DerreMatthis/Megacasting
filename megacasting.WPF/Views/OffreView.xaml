@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="megacasting.WPF.Views.OffreView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:megacasting.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="#393E46">
+    <Grid x:Name="myGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200pt" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200pt" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100pt" />
+            <RowDefinition Height="60pt" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.RowSpan="1"  Grid.ColumnSpan="3">
+            <Label Content="Offre" FontSize="25" BorderThickness="2px" HorizontalContentAlignment="Center" Foreground="#F8F4EA" />
+            <DataGrid x:Name="DataGridOffre" ItemsSource="{Binding Offres}" 
+                      SelectedItem="{Binding SelectedOffre}"
+                      AutoGenerateColumns="False"
+                      Background="#00ADB5"
+                      Grid.RowSpan="1" 
+                      HorizontalAlignment="Stretch"
+                      SelectionMode="Single"
+                      ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Libelle" Binding="{Binding Libelle}"/>
+                    <DataGridTextColumn Header="Date début diffusion" Binding="{Binding DateDebutDiffusion}"/>
+                    <DataGridTextColumn Header="Date fin diffusion" Binding="{Binding DateFinDiffusion}"/>
+                    <DataGridTextColumn Header="Référence" Binding="{Binding Reference}"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                    <DataGridTextColumn Header="Metier" Binding="{Binding IdentifiantMetierNavigation.Libelle}"/>
+                    <DataGridTextColumn Header="Contrat" Binding="{Binding IdentifiantContratNavigation.Libelle}"/>
+                    <DataGridTextColumn Header="Utilisateur" Binding="{Binding IdentifiantUserNavigation.Email}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1"  Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Libelle :" Foreground="White" Margin="5pt"/>
+                <TextBox x:Name="Libelle" Text="{Binding SelectedOffre.Libelle}" Width="100" Margin="5pt"></TextBox>
+                <Label Content="Date début diffusion :" Foreground="White" Margin="5pt"/>
+                <DatePicker x:Name="DateDebutDiffusion" SelectedDateFormat="Short" Text="{Binding SelectedOffre.DateDebutDiffusion}" Margin="5pt"/>
+                <Label Content="Date fin diffusion :" Foreground="White" Margin="5pt"/>
+                <DatePicker x:Name="DateFinDiffusion" SelectedDateFormat="Short" Text="{Binding SelectedOffre.DateFinDiffusion}" Margin="5pt"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Reférence :" Foreground="White" Margin="5pt"/>
+                <TextBox x:Name="Reference" Text="{Binding SelectedOffre.Reference}" Width="100" Margin="5pt"></TextBox>
+                <Label Content="Description :" Foreground="White" Margin="5pt"/>
+                <TextBox x:Name="Description" Text="{Binding SelectedOffre.Description}" Width="100" Margin="5pt"/>
+                <Label Content="Metier :" Foreground="White" Margin="5pt"/>
+                <ComboBox  x:Name="MetiersCombo" Width="150" ItemsSource="{Binding Metiers}" DisplayMemberPath="Libelle" SelectedItem="{Binding SelectedOffre.IdentifiantMetierNavigation}" Margin="5pt"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Contrat :" Foreground="White" Margin="5pt"/>
+                <ComboBox  x:Name="ContratsCombo" Width="100" ItemsSource="{Binding TypeContrats}" DisplayMemberPath="Libelle" SelectedValuePath="{Binding SelectedOffre.IdentifiantContratNavigation}" Margin="5pt"/>
+                <Label Content="Utilisateur :" Foreground="White" Margin="5pt"/>
+                <ComboBox  x:Name="UtilisateursCombo" Width="200" ItemsSource="{Binding Users}" DisplayMemberPath="Email" SelectedValuePath="{Binding SelectedOffre.IdentifiantUserNavigation}" Margin="5pt"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2"  Grid.ColumnSpan="3">
+            <Button x:Name="ModifierOffre" Content="Modifier" Height="30pt" Width="50pt" Margin="5pt" Background="#00ADB5" Click="ModifierOffre_Click"/>
+            <Button x:Name="SupprimerOffre" Content="Supprimer" Height="30pt" Width="50pt" Margin="5pt" Background="#00ADB5" Click="SupprimerOffre_Click"/>
+            <Button x:Name="AjouterOffre" Content="Ajouter" Height="30pt" Width="50pt" Margin="5pt" Background="#00ADB5" Click="AjouterOffre_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

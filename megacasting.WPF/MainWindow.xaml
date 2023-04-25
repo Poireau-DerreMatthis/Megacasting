@@ -1,0 +1,73 @@
+﻿<Window x:Class="megacasting.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:megacasting.WPF.Views"
+        xmlns:local="clr-namespace:megacasting.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowState="Maximized" MinHeight="500" MinWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80pt" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80pt" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.RowSpan="2" Background="#222831">
+            <Button Height="50pt" Name="Accueil" Margin="5pt" Click="Accueil_Click" Background="#00ADB5">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <StackPanel>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Accueil" />
+                </StackPanel>
+            </Button>
+            <Button Height="50pt" Name="User" Margin="5pt" Background="#00ADB5" Click="User_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <StackPanel>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Utilisateur">
+                    </Label>
+                </StackPanel>
+            </Button>
+            <Button Height="50pt" Name="Offre" Margin="5pt" Background="#00ADB5" Click="Offre_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <StackPanel>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Offre" >
+                    </Label>
+                </StackPanel>
+            </Button>
+            <Button Height="50pt" Name="Partenaire" Margin="5pt" Background="#00ADB5" Click="Partenaire_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <StackPanel>
+                    <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Partenaire">
+                    </Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <DockPanel x:Name="DockPanelView"
+                   Grid.Column="2"
+                   Grid.RowSpan="2"
+                   >
+            <view:Accueil/>
+        </DockPanel>
+    </Grid>
+</Window>

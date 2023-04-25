@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ef1cf8ea-0a60-4e00-bde2-54a204b65239": {
+      "ProjectGuid": "ef1cf8ea-0a60-4e00-bde2-54a204b65239",
+      "DisplayName": "megacasting.WPF",
+      "ColorIndex": 0
+    },
+    "fcf4d1d7-100b-4fb9-a734-e485f18d92dc": {
+      "ProjectGuid": "fcf4d1d7-100b-4fb9-a734-e485f18d92dc",
+      "DisplayName": "megacasting.WPF.dblib",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

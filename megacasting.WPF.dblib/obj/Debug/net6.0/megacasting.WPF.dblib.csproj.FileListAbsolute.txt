@@ -1,0 +1,14 @@
+C:\cours\megacasting\megacasting.WPF.dblib\bin\Debug\net6.0\megacasting.WPF.dblib.deps.json
+C:\cours\megacasting\megacasting.WPF.dblib\bin\Debug\net6.0\megacasting.WPF.dblib.runtimeconfig.json
+C:\cours\megacasting\megacasting.WPF.dblib\bin\Debug\net6.0\megacasting.WPF.dblib.dll
+C:\cours\megacasting\megacasting.WPF.dblib\bin\Debug\net6.0\ref\megacasting.WPF.dblib.dll
+C:\cours\megacasting\megacasting.WPF.dblib\bin\Debug\net6.0\megacasting.WPF.dblib.pdb
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.csproj.AssemblyReference.cache
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.GeneratedMSBuildEditorConfig.editorconfig
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.AssemblyInfoInputs.cache
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.AssemblyInfo.cs
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.csproj.CoreCompileInputs.cache
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.dll
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\ref\megacasting.WPF.dblib.dll
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.pdb
+C:\cours\megacasting\megacasting.WPF.dblib\obj\Debug\net6.0\megacasting.WPF.dblib.genruntimeconfig.cache

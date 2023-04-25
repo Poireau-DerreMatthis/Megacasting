@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="megacasting.WPF.Views.UserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:megacasting.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="#393E46">
+    <Grid x:Name="myGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200pt" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200pt" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100pt" />
+            <RowDefinition Height="60pt" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.RowSpan="1"  Grid.ColumnSpan="3">
+            <Label Content="Utilisateur" FontSize="25" BorderThickness="2px" HorizontalContentAlignment="Center" Foreground="#F8F4EA" />
+            <DataGrid x:Name="DataGridUser" ItemsSource="{Binding Users}"
+                      SelectedItem="{Binding SelectedUser}"
+                      AutoGenerateColumns="False"
+                      Background="#00ADB5"
+                      Grid.RowSpan="1" 
+                      HorizontalAlignment="Stretch"
+                      SelectionMode="Single"
+                      ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>
+                    <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}"/>
+                    <DataGridTextColumn Header="Date de naissance" Binding="{Binding DateNaissance}"/>
+                    <DataGridTextColumn Header="Telephone" Binding="{Binding Telephone}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Ville" Binding="{Binding Ville}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1"  Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Nom :" Foreground="White" />
+                <TextBox x:Name="Nom" Text="{Binding SelectedUser.Nom}" Width="100"></TextBox>
+                <Label Content="Prenom :" Foreground="White" />
+                <TextBox x:Name="Prenom" Text="{Binding SelectedUser.Prenom}" Width="100"></TextBox>
+                <Label Content="Date de naissance :" Foreground="White" />
+                <DatePicker x:Name="DateNaissance" SelectedDateFormat="Short" Text="{Binding SelectedUser.DateNaissance}"/>
+                <Label Content="Téléphone :" Foreground="White" />
+                <TextBox x:Name="Telephone" Text="{Binding SelectedUser.Telephone}" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Mail :" Foreground="White" />
+                <TextBox x:Name="Mail" Text="{Binding SelectedUser.Email}" Width="100"></TextBox>
+                <Label Content="Ville :" Foreground="White" />
+                <TextBox x:Name="Ville" Text="{Binding SelectedUser.Ville}" Width="100"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2"  Grid.ColumnSpan="3">
+            <Button x:Name="ModifierUser" Content="Modifier" Height="30pt" Width="50pt" Margin="5pt" Background="#00ADB5" Click="ModifierUser_Click"/>
+            <Button x:Name="SupprimerUser" Content="Supprimer" Height="30pt" Width="50pt" Margin="5pt" Background="#00ADB5" Click="SupprimerUser_Click"/>
+            <Button x:Name="AjouterUser" Content="Ajouter" Height="30pt" Width="50pt" Margin="5pt" Background="#00ADB5" Click="AjouterUser_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
