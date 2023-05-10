@@ -18,7 +18,7 @@
             <RowDefinition Height="60pt" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Grid.RowSpan="1"  Grid.ColumnSpan="3">
-            <Label Content="Partenaire" FontSize="25" BorderThickness="10px" HorizontalContentAlignment="Center" Foreground="#F8F4EA" />
+            <Label Content="Partenaire" FontSize="25" BorderThickness="2px" HorizontalContentAlignment="Center" Foreground="#F8F4EA" />
             <DataGrid x:Name="DataGridPartenaire" ItemsSource="{Binding Partenaires}" 
                       SelectedItem="{Binding SelectedPartenaire}"
                       Background="#00ADB5"
@@ -26,7 +26,8 @@
                       Grid.RowSpan="1" 
                       HorizontalAlignment="Stretch"
                       SelectionMode="Single"
-                      ColumnWidth="*">
+                      ColumnWidth="*"
+                      Height="190">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>
                     <DataGridTextColumn Header="Telephone" Binding="{Binding Telephone}"/>
@@ -36,12 +37,12 @@
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="1"  Grid.ColumnSpan="3">
             <StackPanel Orientation="Horizontal">
-                <Label Content="Nom :" Foreground="White" />
-                <TextBox x:Name="Nom" Text="{Binding SelectedPartenaire.Nom}" Width="100"></TextBox>
-                <Label Content="Téléphone :" Foreground="White" />
-                <TextBox x:Name="Telephone" Text="{Binding SelectedPartenaire.Telephone}" Width="100"></TextBox>
-                <Label Content="Mail :" Foreground="White" />
-                <TextBox x:Name="Mail" Text="{Binding SelectedPartenaire.Mail}" Width="100"></TextBox>
+                <Label Content="Nom :" Foreground="White" Margin="5pt"/>
+                <TextBox x:Name="Nom" Text="{Binding SelectedPartenaire.Nom}" Width="100" Margin="5pt"></TextBox>
+                <Label Content="Téléphone :" Foreground="White" Margin="5pt"/>
+                <TextBox x:Name="Telephone" Text="{Binding SelectedPartenaire.Telephone}" Width="100" Margin="5pt"></TextBox>
+                <Label Content="Mail :" Foreground="White" Margin="5pt"/>
+                <TextBox x:Name="Mail" Text="{Binding SelectedPartenaire.Mail}" Width="100" Margin="5pt"></TextBox>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2"  Grid.ColumnSpan="3">

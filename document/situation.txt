@@ -1,0 +1,56 @@
+ANNEXE 7
+
+2 documents a fournir 
+
+ressources fournies 
+cahier des charges (PPE - Contexte MegaCasting)
+Open nebula (https://virtlab.cciformation.fr/#vms-tab)
+
+résultats attendus
+Une application lourde du projet Megacasting gérant ..
+Une application légère du projet Megacasting gérant ..
+
+SUR LE BUREAU
+
+Cahier des charges (nom du fichier)
+openebula ()
+
+Description des ressources documentaires, matérielles et logicielles utilisées :
+- cahier des charges 
+- cahier des Charges fonctionnel
+	- MCD
+	- Maquettes 
+	- Analyses de risques
+	- Gestion de projet
+	- Diagrammes UML
+- Documentation technique (ce qu'on peut faire à la fin)
+- Documentation utilisateur
+
+
+Machine HP EliteBook EX53-22
+- Utilisateur : MatthisPOIREAUDERRE | mdp : Not24get
+- utilisateur : root | mdp : XXX
+VM1
+- lien SSH NOM
+- utilisateur adminlocal | mdp : Not24get
+- utilisateur root | mdp : Not24get
+VM2
+- lien RDP NOM
+- utilisateur : XXX | mdp : Not24get
+- SSMS : Accès Sql window Authentification
+
+Descriptif de la réalisation professionnelle, y compris les productions réalisées et schémas explicatifs
+Lister toutes les fonctionnalités de l'application (exhaustif)
+
+
+SUR LE BUREAU
+
+cahier des charges (nom fichier)
+Open Nebula (lien vers la plateforme)
+Lien SSH VM1 NOM
+LIEN RDP VM2 NOM
+Lien SSMS
+Lien vers les documentations
+
+
+ 

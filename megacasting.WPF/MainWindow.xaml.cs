@@ -62,17 +62,6 @@ namespace megacasting.WPF
             this.DockPanelView.Children.Add(view);
         }
 
-        private void User_Click(object sender, RoutedEventArgs e)
-        {
-            UserViewModel viewModel = new UserViewModel(this.Entities);
-            this.DockPanelView.Children.Clear();
-            UserView view = new UserView();
-
-            view.DataContext = viewModel;
-
-            this.DockPanelView.Children.Add(view);
-        }
-
         private void Offre_Click(object sender, RoutedEventArgs e)
         {
             OffreViewModel viewModel = new OffreViewModel(this.Entities);
@@ -89,6 +78,17 @@ namespace megacasting.WPF
             PartenaireViewModel viewModel = new PartenaireViewModel(this.Entities);
             this.DockPanelView.Children.Clear();
             PartenaireView view = new PartenaireView();
+
+            view.DataContext = viewModel;
+
+            this.DockPanelView.Children.Add(view);
+        }
+
+        private void Pack_Click(object sender, RoutedEventArgs e)
+        {
+            PackViewModel viewModel = new PackViewModel(this.Entities);
+            this.DockPanelView.Children.Clear();
+            PackView view = new PackView();
 
             view.DataContext = viewModel;
 

@@ -28,14 +28,14 @@
                     <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Accueil" />
                 </StackPanel>
             </Button>
-            <Button Height="50pt" Name="User" Margin="5pt" Background="#00ADB5" Click="User_Click" >
+            <Button Height="50pt" Name="Pack" Margin="5pt" Background="#00ADB5" Click="Pack_Click" >
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"></Setter>
                     </Style>
                 </Button.Resources>
                 <StackPanel>
-                    <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Utilisateur">
+                    <Label FontSize="14" FontWeight="Bold" Foreground="#EEEEEE" Content="Pack">
                     </Label>
                 </StackPanel>
             </Button>

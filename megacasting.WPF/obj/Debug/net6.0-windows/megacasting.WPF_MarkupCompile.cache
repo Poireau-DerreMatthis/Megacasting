@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\cours\megacasting\megacasting.WPF\App.xaml
-51852853225
+6-1477372446
 12108401492
-12-1681846649
+14-1408725934
 2151398693055
-MainWindow.xaml;Views\Accueil.xaml;Views\OffreView.xaml;Views\PartenaireView.xaml;Views\UserView.xaml;
+MainWindow.xaml;Views\Accueil.xaml;Views\OffreView.xaml;Views\PackView.xaml;Views\PartenaireView.xaml;Views\UserView.xaml;
 
 False
 

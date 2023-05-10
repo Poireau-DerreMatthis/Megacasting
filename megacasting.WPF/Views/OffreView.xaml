@@ -26,7 +26,9 @@
                       Grid.RowSpan="1" 
                       HorizontalAlignment="Stretch"
                       SelectionMode="Single"
-                      ColumnWidth="*">
+                      ColumnWidth="*" 
+                      Height="190"
+                      >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Libelle" Binding="{Binding Libelle}"/>
                     <DataGridTextColumn Header="Date début diffusion" Binding="{Binding DateDebutDiffusion}"/>
